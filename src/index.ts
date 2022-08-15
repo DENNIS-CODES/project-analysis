@@ -62,6 +62,15 @@ const Main = async () => {
         });
       }
     );
+    app.get("/priceanlysis/ping", (req: any, res: any) => {
+      return res.send({
+        error: false,
+        message: "server on Fire🔥🔥😉",
+      });
+    });
+    app.listen(PORT, () => {
+      console.log("Server Running on port: " + PORT);
+    });
   } catch (error) {
     console.log(error);
   }
